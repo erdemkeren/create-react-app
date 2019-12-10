@@ -139,6 +139,7 @@ module.exports = function(webpackEnv) {
           loader: require.resolve(preProcessor),
           options: {
             sourceMap: true,
+            javascriptEnabled: true,
           },
         }
       );
@@ -539,7 +540,6 @@ module.exports = function(webpackEnv) {
                 {
                   importLoaders: 2,
                   sourceMap: isEnvProduction && shouldUseSourceMap,
-                  javascriptEnabled: true,
                 },
                 'less-loader'
               ),
